@@ -23,19 +23,16 @@ public class CelulaCentral extends Celula implements Movimentos {
 	@Override
 	public void moverParaBaixo() {
 		trocarNumero(this, getBaixo());
-
 	}
 
 	@Override
 	public void moverParaEsquerda() {
 		trocarNumero(this, getEsquerda());
-
 	}
 
 	@Override
 	public void moverParaDireita() {
 		trocarNumero(this, getDireita());
-
 	}
 
 	public Celula getCima() {

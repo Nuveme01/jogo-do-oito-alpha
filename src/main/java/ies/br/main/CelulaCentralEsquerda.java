@@ -24,13 +24,11 @@ public class CelulaCentralEsquerda extends Celula implements Movimentos {
 	@Override
 	public void moverParaEsquerda() {
 		System.out.println("Movimento não permitido");
-
 	}
 
 	@Override
 	public void moverParaDireita() {
 		System.out.println("Movimento não permitido");
-
 	}
 
 	public Celula getBaixo() {

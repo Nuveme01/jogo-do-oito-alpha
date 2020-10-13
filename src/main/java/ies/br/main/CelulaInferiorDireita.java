@@ -13,26 +13,22 @@ public class CelulaInferiorDireita extends Celula implements Movimentos {
 
 	@Override
 	public void moverParaCima() {
-		trocarNumero(this, cima);
-
+		trocarNumero(this, getCima());
 	}
 
 	@Override
 	public void moverParaBaixo() {
 		System.out.println("Movimento não permitido");
-
 	}
 
 	@Override
 	public void moverParaEsquerda() {
-		trocarNumero(this, esquerda);
-
+		trocarNumero(this, getEsquerda());
 	}
 
 	@Override
 	public void moverParaDireita() {
 		System.out.println("Movimento não permitido");
-
 	}
 
 	public Celula getCima() {

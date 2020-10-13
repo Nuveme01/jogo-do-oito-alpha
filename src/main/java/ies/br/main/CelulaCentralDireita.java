@@ -11,6 +11,26 @@ public class CelulaCentralDireita extends Celula implements Movimentos {
 		this.setBaixo(baixo);
 	}
 
+	@Override
+	public void moverParaCima() {
+		trocarNumero(this, getCima());
+	}
+
+	@Override
+	public void moverParaBaixo() {
+		trocarNumero(this, getBaixo());
+	}
+
+	@Override
+	public void moverParaEsquerda() {
+		System.out.println("Movimento não permitido");
+	}
+
+	@Override
+	public void moverParaDireita() {
+		System.out.println("Movimento não permitido");
+	}
+
 	public Celula getBaixo() {
 		return baixo;
 	}
@@ -25,30 +45,6 @@ public class CelulaCentralDireita extends Celula implements Movimentos {
 
 	public void setCima(Celula cima) {
 		this.cima = cima;
-	}
-
-	@Override
-	public void moverParaCima() {
-		trocarNumero(this, getCima());
-
-	}
-
-	@Override
-	public void moverParaBaixo() {
-		trocarNumero(this, getBaixo());
-
-	}
-
-	@Override
-	public void moverParaEsquerda() {
-		System.out.println("Movimento não permitido");
-
-	}
-
-	@Override
-	public void moverParaDireita() {
-		System.out.println("Movimento não permitido");
-
 	}
 
 }

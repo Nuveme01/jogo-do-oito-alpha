@@ -14,7 +14,6 @@ public class CelulaInferiorCentral extends Celula implements Movimentos {
 	@Override
 	public void moverParaCima() {
 		trocarNumero(this, getCima());
-
 	}
 
 	@Override
@@ -30,7 +29,6 @@ public class CelulaInferiorCentral extends Celula implements Movimentos {
 	@Override
 	public void moverParaDireita() {
 		trocarNumero(this, getDireita());
-
 	}
 
 	public Celula getCima() {
