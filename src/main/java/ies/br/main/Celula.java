@@ -1,7 +1,5 @@
 package ies.br.main;
 
-//opa
-
 public class Celula {
 	private Integer numero;
 
