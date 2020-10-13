@@ -2,56 +2,56 @@ package ies.br.main;
 
 public class CelulaCentral extends Celula implements Movimentos {
 
-	private Celula deCima;
-	private Celula deBaixo;
+	private Celula cima;
+	private Celula baixo;
 	private Celula esquerda;
 	private Celula direita;
 
-	public CelulaCentral(Integer numero, Celula deCima, Celula deBaixo, Celula esquerda, Celula direita) {
+	public CelulaCentral(Integer numero, Celula cima, Celula baixo, Celula esquerda, Celula direita) {
 		super(numero);
-		this.setDeCima(deCima);
-		this.setDeBaixo(deBaixo);
+		this.setCima(cima);
+		this.setBaixo(baixo);
 		this.setEsquerda(esquerda);
 		this.setDireita(direita);
 	}
 
 	@Override
 	public void moverParaCima() {
-		trocarNumero(this, deCima);
+		trocarNumero(this, getCima());
 	}
 
 	@Override
 	public void moverParaBaixo() {
-		trocarNumero(this, deBaixo);
+		trocarNumero(this, getBaixo());
 
 	}
 
 	@Override
 	public void moverParaEsquerda() {
-		trocarNumero(this, esquerda);
+		trocarNumero(this, getEsquerda());
 
 	}
 
 	@Override
 	public void moverParaDireita() {
-		trocarNumero(this, direita);
+		trocarNumero(this, getDireita());
 
 	}
 
-	public Celula getDeCima() {
-		return deCima;
+	public Celula getCima() {
+		return cima;
 	}
 
-	public void setDeCima(Celula deCima) {
-		this.deCima = deCima;
+	public void setCima(Celula deCima) {
+		this.cima = deCima;
 	}
 
-	public Celula getDeBaixo() {
-		return deBaixo;
+	public Celula getBaixo() {
+		return baixo;
 	}
 
-	public void setDeBaixo(Celula deBaixo) {
-		this.deBaixo = deBaixo;
+	public void setBaixo(Celula deBaixo) {
+		this.baixo = deBaixo;
 	}
 
 	public Celula getEsquerda() {
