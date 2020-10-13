@@ -16,8 +16,8 @@ public class Celula {
 	}
 
 	public static void trocarNumero(Celula origem, Celula destino) {
-		Integer armazenamentoTemporario = origem.getNumero();
+		Integer armazenamentoTemporarioUsadoParaAEfetuaçãoDaTrocaDeValoresEntreAsCelulasDoJogoDoOito = origem.getNumero();
 		origem.setNumero(destino.getNumero());
-		destino.setNumero(armazenamentoTemporario);
+		destino.setNumero(armazenamentoTemporarioUsadoParaAEfetuaçãoDaTrocaDeValoresEntreAsCelulasDoJogoDoOito);
 	}
 }

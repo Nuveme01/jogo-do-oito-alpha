@@ -28,7 +28,6 @@ public class TesteMovimentaçãoCelulaCentral {
 
 	@Test
 	public void moverZeroPraCima() {
-
 		cellCenter.moverParaCima();
 
 		assertEquals(cima.getNumero(), Integer.valueOf(0));
