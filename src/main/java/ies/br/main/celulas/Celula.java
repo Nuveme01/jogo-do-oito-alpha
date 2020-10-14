@@ -1,6 +1,6 @@
 package ies.br.main.celulas;
 
-import ies.br.main.Movimentos;
+import ies.br.main.movimentos.Movimentos;
 
 public class Celula implements Movimentos {
 	protected Integer numero;
