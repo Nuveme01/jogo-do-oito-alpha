@@ -2,9 +2,6 @@ package ies.br.main.celulas;
 
 public class CelulaSuperiorEsquerda extends Celula {
 
-	private Celula baixo;
-	private Celula direita;
-
 	public CelulaSuperiorEsquerda(Integer numero) {
 		super(numero);
 	}
@@ -23,35 +20,18 @@ public class CelulaSuperiorEsquerda extends Celula {
 	}
 
 	@Override
-	public void moverParaBaixo() {
-		trocarNumero(this, getBaixo());
-
-	}
-
-	@Override
 	public void moverParaEsquerda() {
 		System.out.println("Movimento não permitido");
 	}
 
 	@Override
-	public void moverParaDireita() {
-		trocarNumero(this, getDireita());
+	public Celula getCima() {
+		return this;
 	}
 
-	public Celula getDireita() {
-		return direita;
-	}
-
-	public void setDireita(Celula direita) {
-		this.direita = direita;
-	}
-
-	public Celula getBaixo() {
-		return baixo;
-	}
-
-	public void setBaixo(Celula baixo) {
-		this.baixo = baixo;
+	@Override
+	public Celula getEsquerda() {
+		return this;
 	}
 
 }

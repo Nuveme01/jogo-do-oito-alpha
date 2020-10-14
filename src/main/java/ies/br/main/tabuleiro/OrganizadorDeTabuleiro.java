@@ -75,8 +75,8 @@ public class OrganizadorDeTabuleiro {
 	}
 	
 	public void moverPonteiroPraCima() {
-		ponteiro.moverParaCima();
-		atualizarPonteiro(ponteiro.getCima());
+			ponteiro.moverParaCima();
+			atualizarPonteiro(ponteiro.getCima());
 	}
 	
 	public void mostrarTabuleiro() {

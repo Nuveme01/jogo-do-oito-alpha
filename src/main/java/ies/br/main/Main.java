@@ -9,5 +9,6 @@ public class Main {
 		controle.getTabuleiro().mostrarTabuleiro();
 		controle.moverPraCima();
 		controle.moverPraEsquerda();
+
 	}
 }

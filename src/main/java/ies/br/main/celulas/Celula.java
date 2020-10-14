@@ -3,11 +3,11 @@ package ies.br.main.celulas;
 import ies.br.main.Movimentos;
 
 public class Celula implements Movimentos {
-	private Integer numero;
-	private Celula cima;
-	private Celula baixo;
-	private Celula esquerda;
-	private Celula direita;
+	protected Integer numero;
+	protected Celula cima;
+	protected Celula baixo;
+	protected Celula esquerda;
+	protected Celula direita;
 
 	public Celula(Integer numero) {
 		this.setNumero(numero);
@@ -29,22 +29,22 @@ public class Celula implements Movimentos {
 
 	@Override
 	public void moverParaCima() {
-		// Não possui ações, pois a celula ainda não possui posição
+		trocarNumero(this, cima);
 	}
 
 	@Override
 	public void moverParaBaixo() {
-		// Não possui ações, pois a celula ainda não possui posição
+		trocarNumero(this, baixo);
 	}
 
 	@Override
 	public void moverParaEsquerda() {
-		// Não possui ações, pois a celula ainda não possui posição
+		trocarNumero(this, esquerda);
 	}
 
 	@Override
 	public void moverParaDireita() {
-		// Não possui ações, pois a celula ainda não possui posição
+		trocarNumero(this, direita);
 	}
 
 	public Celula getCima() {

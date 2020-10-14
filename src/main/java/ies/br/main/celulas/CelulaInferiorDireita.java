@@ -15,23 +15,23 @@ public class CelulaInferiorDireita extends Celula {
 	}
 
 	@Override
-	public void moverParaCima() {
-		trocarNumero(this, getCima());
-	}
-
-	@Override
 	public void moverParaBaixo() {
 		System.out.println("Movimento não permitido");
 	}
 
 	@Override
-	public void moverParaEsquerda() {
-		trocarNumero(this, getEsquerda());
+	public void moverParaDireita() {
+		System.out.println("Movimento não permitido");
 	}
 
 	@Override
-	public void moverParaDireita() {
-		System.out.println("Movimento não permitido");
+	public Celula getDireita() {
+		return this;
+	}
+
+	@Override
+	public Celula getBaixo() {
+		return this;
 	}
 
 }
