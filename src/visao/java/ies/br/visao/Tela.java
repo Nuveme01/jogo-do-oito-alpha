@@ -1,25 +1,15 @@
 package ies.br.visao;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 import ies.br.main.tabuleiro.ControleDoTabuleiro;
 import ies.br.main.tabuleiro.OrganizadorDeTabuleiro;
-
-import javax.swing.JButton;
-import java.awt.BorderLayout;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.awt.event.ActionEvent;
-import javax.swing.JLabel;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import javax.swing.SpringLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
 
 public class Tela {
 
