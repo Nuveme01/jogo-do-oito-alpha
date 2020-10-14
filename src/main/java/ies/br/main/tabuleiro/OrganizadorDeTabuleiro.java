@@ -93,5 +93,9 @@ public class OrganizadorDeTabuleiro {
 	public void setPonteiro(Celula ponteiro) {
 		this.ponteiro = ponteiro;
 	}
+	
+	public Integer getCentro() {
+		return centro.getNumero();
+	}
 
 }
