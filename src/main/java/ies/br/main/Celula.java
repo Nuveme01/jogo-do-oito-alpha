@@ -1,6 +1,6 @@
 package ies.br.main;
 
-public class Celula {
+public class Celula implements Movimentos {
 	private Integer numero;
 
 	public Celula(Integer numero) {
@@ -16,8 +16,32 @@ public class Celula {
 	}
 
 	public static void trocarNumero(Celula origem, Celula destino) {
-		Integer armazenamentoTemporarioUsadoParaAEfetuaçãoDaTrocaDeValoresEntreAsCelulasDoJogoDoOito = origem.getNumero();
+		Integer armazenamentoTemporario = origem.getNumero();
 		origem.setNumero(destino.getNumero());
-		destino.setNumero(armazenamentoTemporarioUsadoParaAEfetuaçãoDaTrocaDeValoresEntreAsCelulasDoJogoDoOito);
+		destino.setNumero(armazenamentoTemporario);
+	}
+
+	@Override
+	public void moverParaCima() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moverParaBaixo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moverParaEsquerda() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void moverParaDireita() {
+		// TODO Auto-generated method stub
+		
 	}
 }

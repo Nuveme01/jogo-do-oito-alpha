@@ -1,11 +1,11 @@
 package ies.br.main;
 
-public class CelulaInferiorEsquerda extends Celula implements Movimentos {
+public class CelulaInferiorEsquerda extends Celula {
 
 	private Celula cima;
 	private Celula direita;
 
-	public CelulaInferiorEsquerda(Integer numero,Celula cima, Celula direita) {
+	public CelulaInferiorEsquerda(Integer numero, Celula cima, Celula direita) {
 		super(numero);
 		this.setCima(cima);
 		this.setDireita(direita);

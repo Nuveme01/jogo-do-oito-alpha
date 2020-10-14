@@ -1,18 +1,30 @@
 package ies.br.main;
 
-public class CelulaCentral extends Celula implements Movimentos {
+public class CelulaCentral extends Celula {
 
 	private Celula cima;
 	private Celula baixo;
 	private Celula esquerda;
 	private Celula direita;
 
-	public CelulaCentral(Integer numero, Celula cima, Celula baixo, Celula esquerda, Celula direita) {
+	public CelulaCentral(Integer numero) {
 		super(numero);
-		this.setCima(cima);
-		this.setBaixo(baixo);
-		this.setEsquerda(esquerda);
+	}
+
+	public void fixarDireita(Celula direita) {
 		this.setDireita(direita);
+	}
+
+	public void fixarEsquerda(Celula esquerda) {
+		this.setEsquerda(esquerda);
+	}
+
+	public void fixarBaixo(Celula baixo) {
+		this.setBaixo(baixo);
+	}
+
+	public void fixarCima(Celula cima) {
+		this.setCima(cima);
 	}
 
 	@Override

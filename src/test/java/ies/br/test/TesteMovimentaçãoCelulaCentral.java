@@ -23,7 +23,11 @@ public class TesteMovimentaçãoCelulaCentral {
 		esquerda = new Celula(Integer.valueOf(3));
 		direita = new Celula(Integer.valueOf(4));
 
-		cellCenter = new CelulaCentral(Integer.valueOf(0), cima, baixo, esquerda, direita);
+		cellCenter = new CelulaCentral(Integer.valueOf(0));
+		cellCenter.fixarCima(cima);
+		cellCenter.fixarBaixo(baixo);
+		cellCenter.fixarEsquerda(esquerda);
+		cellCenter.fixarDireita(direita);
 	}
 
 	@Test

@@ -1,6 +1,6 @@
 package ies.br.main;
 
-public class CelulaInferiorDireita extends Celula implements Movimentos {
+public class CelulaInferiorDireita extends Celula {
 
 	private Celula cima;
 	private Celula esquerda;
