@@ -1,20 +1,27 @@
-package ies.br.main;
+package ies.br.main.celulas;
 
-public class CelulaInferiorCentral extends Celula {
+public class CelulaInferiorEsquerda extends Celula {
 
 	private Celula cima;
 	private Celula direita;
 
-	public CelulaInferiorCentral(Integer numero, Celula cima, Celula direita) {
+	public CelulaInferiorEsquerda(Integer numero) {
 		super(numero);
-		this.setCima(cima);
-		this.setDireita(direita);
+	}
+
+	public void fixarCima(Celula cima) {
+		setCima(cima);
+	}
+
+	public void fixarDireita(Celula direita) {
+		setDireita(direita);
 	}
 
 	@Override
 	public void moverParaCima() {
 		trocarNumero(this, getCima());
 	}
+
 
 	@Override
 	public void moverParaBaixo() {

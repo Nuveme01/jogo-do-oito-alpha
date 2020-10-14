@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import ies.br.main.Celula;
+import ies.br.main.celulas.Celula;
 
 public class TesteDeTrocaDeNumeroDaCelula {
 

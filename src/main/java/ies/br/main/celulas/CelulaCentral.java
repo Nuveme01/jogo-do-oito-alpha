@@ -1,4 +1,4 @@
-package ies.br.main;
+package ies.br.main.celulas;
 
 public class CelulaCentral extends Celula {
 

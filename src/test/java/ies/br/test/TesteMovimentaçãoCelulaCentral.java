@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import ies.br.main.Celula;
-import ies.br.main.CelulaCentral;
+import ies.br.main.celulas.Celula;
+import ies.br.main.celulas.CelulaCentral;
 
 public class TesteMovimentaçãoCelulaCentral {
 

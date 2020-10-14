@@ -1,14 +1,25 @@
-package ies.br.main;
+package ies.br.main.celulas;
 
-public class CelulaInferiorEsquerda extends Celula {
+public class CelulaInferiorCentral extends Celula {
 
 	private Celula cima;
+	private Celula esquerda;
 	private Celula direita;
 
-	public CelulaInferiorEsquerda(Integer numero, Celula cima, Celula direita) {
+	public CelulaInferiorCentral(Integer numero) {
 		super(numero);
-		this.setCima(cima);
-		this.setDireita(direita);
+	}
+
+	public void fixarCima(Celula cima) {
+		setCima(cima);
+	}
+
+	public void fixarDireita(Celula direita) {
+		setDireita(direita);
+	}
+
+	public void fixarEsquerda(Celula esquerda) {
+		setEsquerda(esquerda);
 	}
 
 	@Override
@@ -23,7 +34,7 @@ public class CelulaInferiorEsquerda extends Celula {
 
 	@Override
 	public void moverParaEsquerda() {
-		System.out.println("Movimento não permitido");
+		trocarNumero(this, esquerda);
 	}
 
 	@Override
@@ -45,6 +56,14 @@ public class CelulaInferiorEsquerda extends Celula {
 
 	public void setDireita(Celula direita) {
 		this.direita = direita;
+	}
+
+	public Celula getEsquerda() {
+		return esquerda;
+	}
+
+	public void setEsquerda(Celula esquerda) {
+		this.esquerda = esquerda;
 	}
 
 }
