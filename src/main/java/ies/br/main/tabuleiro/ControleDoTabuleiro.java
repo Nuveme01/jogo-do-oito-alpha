@@ -2,7 +2,7 @@ package ies.br.main.tabuleiro;
 
 public class ControleDoTabuleiro {
 
-	private static OrganizadorDeTabuleiro tabuleiro;
+	private OrganizadorDeTabuleiro tabuleiro;
 
 	public ControleDoTabuleiro(OrganizadorDeTabuleiro tabuleiro) {
 		this.setTabuleiro(tabuleiro);
@@ -13,7 +13,7 @@ public class ControleDoTabuleiro {
 	}
 
 	public void setTabuleiro(OrganizadorDeTabuleiro tabuleiro) {
-		ControleDoTabuleiro.tabuleiro = tabuleiro;
+		this.tabuleiro = tabuleiro;
 	}
 
 	public void moverPraCima() {

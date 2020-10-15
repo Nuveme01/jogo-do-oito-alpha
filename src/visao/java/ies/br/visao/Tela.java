@@ -56,8 +56,13 @@ public class Tela {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				controle.moverPraCima();
+				atualizeTodasAsCelulas();
 			}
+
+			
 		});
+		
+		
 
 		JButton btnNewButton_1 = new JButton("Esquerda");
 		btnNewButton_1.setBounds(0, 119, 89, 23);
@@ -91,5 +96,9 @@ public class Tela {
 		});
 		frame.getContentPane().add(btnNewButton_3);
 
+	}
+	
+	private void atualizeTodasAsCelulas() {
+		
 	}
 }

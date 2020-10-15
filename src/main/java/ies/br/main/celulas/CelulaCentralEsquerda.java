@@ -20,7 +20,7 @@ public class CelulaCentralEsquerda extends Celula {
 
 	@Override
 	public void moverParaEsquerda() {
-		System.out.println("Movimento não permitido");
+		
 	}
 
 	@Override
