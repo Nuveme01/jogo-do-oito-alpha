@@ -2,17 +2,17 @@ package ies.br.main.tabuleiro;
 
 public class ControleDoTabuleiro {
 
-	private OrganizadorDeTabuleiro tabuleiro;
+	private Tabuleiro tabuleiro;
 
-	public ControleDoTabuleiro(OrganizadorDeTabuleiro tabuleiro) {
+	public ControleDoTabuleiro(Tabuleiro tabuleiro) {
 		this.setTabuleiro(tabuleiro);
 	}
 
-	public OrganizadorDeTabuleiro getTabuleiro() {
+	public Tabuleiro getTabuleiro() {
 		return tabuleiro;
 	}
 
-	public void setTabuleiro(OrganizadorDeTabuleiro tabuleiro) {
+	public void setTabuleiro(Tabuleiro tabuleiro) {
 		this.tabuleiro = tabuleiro;
 	}
 
