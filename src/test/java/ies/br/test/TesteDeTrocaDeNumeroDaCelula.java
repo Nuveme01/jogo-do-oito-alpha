@@ -15,7 +15,7 @@ public class TesteDeTrocaDeNumeroDaCelula {
 	public void trocandoValoresDaPrimeiraCelulaComASegunda() {
 		celula1 = new Celula(Integer.valueOf(5));
 		celula2 = new Celula(Integer.valueOf(9));
-		//Celula.trocarNumero(celula1, celula2);
+		celula1.trocarNumero(celula1, celula2);
 
 		assertEquals(Integer.valueOf(9), celula1.getNumero());
 	}
@@ -24,7 +24,7 @@ public class TesteDeTrocaDeNumeroDaCelula {
 	public void trocandoValoresDaSegundaCelulaComAPrimeira() {
 		celula1 = new Celula(Integer.valueOf(5));
 		celula2 = new Celula(Integer.valueOf(9));
-		//Celula.trocarNumero(celula1, celula2);
+		celula2.trocarNumero(celula1, celula2);
 
 		assertEquals(Integer.valueOf(5), celula2.getNumero());
 	}

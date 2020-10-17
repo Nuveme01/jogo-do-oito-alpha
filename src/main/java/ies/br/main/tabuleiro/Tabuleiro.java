@@ -36,38 +36,38 @@ public class Tabuleiro {
 		inferiorDireita = new CelulaInferiorDireita(Integer.valueOf(0));
 		setPonteiro(inferiorDireita);
 
-		superiorEsquerda.fixarBaixo(centroEsquerda);
-		superiorEsquerda.fixarDireita(superiorCentral);
+		superiorEsquerda.setBaixo(centroEsquerda);
+		superiorEsquerda.setDireita(superiorCentral);
 
-		superiorCentral.fixarBaixo(centro);
-		superiorCentral.fixarDireita(superiorDireita);
-		superiorCentral.fixarEsquerda(superiorEsquerda);
+		superiorCentral.setBaixo(centro);
+		superiorCentral.setDireita(superiorDireita);
+		superiorCentral.setEsquerda(superiorEsquerda);
 
-		superiorDireita.fixarBaixo(centroDireita);
-		superiorDireita.fixarEsquerda(superiorCentral);
+		superiorDireita.setBaixo(centroDireita);
+		superiorDireita.setEsquerda(superiorCentral);
 
-		centroEsquerda.fixarDireita(centro);
-		centroEsquerda.fixarBaixo(inferiorEsquerda);
-		centroEsquerda.fixarCima(superiorEsquerda);
+		centroEsquerda.setDireita(centro);
+		centroEsquerda.setBaixo(inferiorEsquerda);
+		centroEsquerda.setCima(superiorEsquerda);
 
-		centro.fixarBaixo(inferiorCentral);
-		centro.fixarCima(superiorCentral);
-		centro.fixarDireita(centroDireita);
-		centro.fixarEsquerda(centroEsquerda);
+		centro.setBaixo(inferiorCentral);
+		centro.setCima(superiorCentral);
+		centro.setDireita(centroDireita);
+		centro.setEsquerda(centroEsquerda);
 
-		centroDireita.fixarBaixo(inferiorDireita);
-		centroDireita.fixarCima(superiorDireita);
-		centroDireita.fixarEsquerda(centro);
+		centroDireita.setBaixo(inferiorDireita);
+		centroDireita.setCima(superiorDireita);
+		centroDireita.setEsquerda(centro);
 
-		inferiorEsquerda.fixarCima(centroEsquerda);
-		inferiorEsquerda.fixarDireita(inferiorCentral);
+		inferiorEsquerda.setCima(centroEsquerda);
+		inferiorEsquerda.setDireita(inferiorCentral);
 
-		inferiorCentral.fixarCima(centro);
-		inferiorCentral.fixarDireita(inferiorDireita);
-		inferiorCentral.fixarEsquerda(inferiorEsquerda);
+		inferiorCentral.setCima(centro);
+		inferiorCentral.setDireita(inferiorDireita);
+		inferiorCentral.setEsquerda(inferiorEsquerda);
 
-		inferiorDireita.fixarCima(centroDireita);
-		inferiorDireita.fixarEsquerda(inferiorCentral);
+		inferiorDireita.setCima(centroDireita);
+		inferiorDireita.setEsquerda(inferiorCentral);
 	}
 
 	public void atualizarPonteiro(Celula celula) {
