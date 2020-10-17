@@ -25,14 +25,14 @@ public class Tabuleiro {
 	private CelulaSuperiorEsquerda superiorEsquerda;
 
 	public Tabuleiro() {
-		superiorEsquerda = new CelulaSuperiorEsquerda(Integer.valueOf(1));
-		superiorCentral = new CelulaSuperiorCentral(Integer.valueOf(2));
-		superiorDireita = new CelulaSuperiorDireita(Integer.valueOf(3));
+		superiorEsquerda = new CelulaSuperiorEsquerda(Integer.valueOf(8));
+		superiorCentral = new CelulaSuperiorCentral(Integer.valueOf(3));
+		superiorDireita = new CelulaSuperiorDireita(Integer.valueOf(5));
 		centroEsquerda = new CelulaCentralEsquerda(Integer.valueOf(4));
-		centro = new CelulaCentral(Integer.valueOf(5));
+		centro = new CelulaCentral(Integer.valueOf(1));
 		centroDireita = new CelulaCentralDireita(Integer.valueOf(6));
-		inferiorEsquerda = new CelulaInferiorEsquerda(Integer.valueOf(7));
-		inferiorCentral = new CelulaInferiorCentral(Integer.valueOf(8));
+		inferiorEsquerda = new CelulaInferiorEsquerda(Integer.valueOf(2));
+		inferiorCentral = new CelulaInferiorCentral(Integer.valueOf(7));
 		inferiorDireita = new CelulaInferiorDireita(Integer.valueOf(0));
 		setPonteiro(inferiorDireita);
 
@@ -77,13 +77,6 @@ public class Tabuleiro {
 	public void moverPonteiroPraCima() {
 		ponteiro.moverParaCima();
 		atualizarPonteiro(ponteiro.getCima());
-	}
-
-	public void mostrarTabuleiro() {
-		System.out.println(getSuperiorEsquerda() + "" + getSuperiorCentral() + "" + getSuperiorDireita());
-		System.out.println(getCentroEsquerda() + "" + centro.getNumero() + "" + getCentroDireita());
-		System.out.println(getInferiorEsquerda() + "" + getInferiorCentral() + "" + getInferiorDireita());
-		System.out.println("-----------");
 	}
 
 	public Celula getPonteiro() {
