@@ -70,15 +70,6 @@ public class Tabuleiro {
 		inferiorDireita.setEsquerda(inferiorCentral);
 	}
 
-	public void atualizarPonteiro(Celula celula) {
-		setPonteiro(celula);
-	}
-
-	public void moverPonteiroPraCima() {
-		ponteiro.moverParaCima();
-		atualizarPonteiro(ponteiro.getCima());
-	}
-
 	public Celula getPonteiro() {
 		return ponteiro;
 	}
