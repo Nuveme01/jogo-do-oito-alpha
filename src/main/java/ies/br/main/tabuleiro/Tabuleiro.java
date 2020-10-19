@@ -25,16 +25,16 @@ public class Tabuleiro {
 	private CelulaSuperiorEsquerda superiorEsquerda;
 
 	public Tabuleiro() {
-		superiorEsquerda = new CelulaSuperiorEsquerda(Integer.valueOf(1));
-		superiorCentral = new CelulaSuperiorCentral(Integer.valueOf(2));
-		superiorDireita = new CelulaSuperiorDireita(Integer.valueOf(3));
-		centroEsquerda = new CelulaCentralEsquerda(Integer.valueOf(8));
-		centro = new CelulaCentral(Integer.valueOf(0));
-		centroDireita = new CelulaCentralDireita(Integer.valueOf(4));
-		inferiorEsquerda = new CelulaInferiorEsquerda(Integer.valueOf(7));
-		inferiorCentral = new CelulaInferiorCentral(Integer.valueOf(6));
-		inferiorDireita = new CelulaInferiorDireita(Integer.valueOf(5));
-		setPonteiro(centro);
+		superiorEsquerda = new CelulaSuperiorEsquerda(Integer.valueOf(8));
+		superiorCentral = new CelulaSuperiorCentral(Integer.valueOf(6));
+		superiorDireita = new CelulaSuperiorDireita(Integer.valueOf(4));
+		centroEsquerda = new CelulaCentralEsquerda(Integer.valueOf(3));
+		centro = new CelulaCentral(Integer.valueOf(7));
+		centroDireita = new CelulaCentralDireita(Integer.valueOf(2));
+		inferiorEsquerda = new CelulaInferiorEsquerda(Integer.valueOf(5));
+		inferiorCentral = new CelulaInferiorCentral(Integer.valueOf(1));
+		inferiorDireita = new CelulaInferiorDireita(Integer.valueOf(0));
+		setPonteiro(inferiorDireita);
 
 		superiorEsquerda.setBaixo(centroEsquerda);
 		superiorEsquerda.setDireita(superiorCentral);
