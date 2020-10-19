@@ -246,7 +246,7 @@ public class Tela {
 			for (JLabel vizinhosColoridos : listaDeTextos) {
 
 				mapaVizinhosColoridos.put(vizinhosColoridos.getText(),
-						() -> vizinhosColoridos.setForeground(Color.blue));
+						() -> vizinhosColoridos.setForeground(Color.MAGENTA));
 
 				mapaVizinhosBrancos.put(vizinhosColoridos.getText(),
 						() -> vizinhosColoridos.setForeground(Color.black));
