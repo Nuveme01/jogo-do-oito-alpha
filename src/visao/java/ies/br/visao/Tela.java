@@ -6,7 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.swing.JButton;
@@ -114,46 +116,20 @@ public class Tela {
 
 		ActionListener cimaPressionado = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controle.moverPraCima();
-				atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda,
-						centroCentral, centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
-			}
-		};
-
-		KeyListener teclado = new KeyListener() {
-
-			@Override
-			public void keyTyped(KeyEvent e) {
-			}
-
-			@Override
-			public void keyReleased(KeyEvent e) {
-			}
-
-			@Override
-			public void keyPressed(KeyEvent e) {
-				Map<Integer, Runnable> mapa = new HashMap<Integer, Runnable>();
-				mapa.put(KeyEvent.VK_W, () -> controle.moverPraCima());
-				mapa.put(KeyEvent.VK_S, () -> controle.moverPraBaixo());
-				mapa.put(KeyEvent.VK_A, () -> controle.moverPraEsquerda());
-				mapa.put(KeyEvent.VK_D, () -> controle.moverPraDireita());
-
-				mapa.get(e.getKeyCode()).run();
-
+				controle.moverPraBaixo();
 				atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda,
 						centroCentral, centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
 			}
 		};
 
 		botaoCima.addActionListener(cimaPressionado);
-		botaoCima.addKeyListener(teclado);
 
 		JButton botaoEsquerda = new JButton("Esquerda");
 		botaoEsquerda.setBounds(117, 214, 89, 23);
 
 		ActionListener esquerdaPressionado = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controle.moverPraEsquerda();
+				controle.moverPraDireita();
 				atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda,
 						centroCentral, centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
 			}
@@ -169,7 +145,7 @@ public class Tela {
 
 		ActionListener direitaPressionado = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controle.moverPraDireita();
+				controle.moverPraEsquerda();
 				atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda,
 						centroCentral, centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
 			}
@@ -183,7 +159,7 @@ public class Tela {
 
 		ActionListener baixoPressionado = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				controle.moverPraBaixo();
+				controle.moverPraCima();
 				atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda,
 						centroCentral, centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
 			}
@@ -192,6 +168,35 @@ public class Tela {
 		botaoBaixo.addActionListener(baixoPressionado);
 		frmJogoDoOito.getContentPane().add(botaoBaixo);
 
+		KeyListener teclado = new KeyListener() {
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				Map<Integer, Runnable> mapa = new HashMap<Integer, Runnable>();
+				mapa.put(KeyEvent.VK_W, () -> controle.moverPraBaixo());
+				mapa.put(KeyEvent.VK_S, () -> controle.moverPraCima());
+				mapa.put(KeyEvent.VK_A, () -> controle.moverPraDireita());
+				mapa.put(KeyEvent.VK_D, () -> controle.moverPraEsquerda());
+
+				mapa.get(e.getKeyCode()).run();
+
+				atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda,
+						centroCentral, centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
+			}
+		};
+
+		botaoCima.addKeyListener(teclado);
+
+		atualizeTodasAsCelulas(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda, centroCentral,
+				centroDireita, inferiorCentral, inferiorEsquerdo, inferiorDireita);
 	}
 
 	private void atualizeTodasAsCelulas(JLabel superiorEsquerdo, JLabel superiorCentral, JLabel superiorDireita,
@@ -206,5 +211,37 @@ public class Tela {
 		inferiorCentral.setText(controle.getTabuleiro().getInferiorCentral().toString());
 		inferiorEsquerdo.setText(controle.getTabuleiro().getInferiorEsquerda().toString());
 		inferiorDireita.setText(controle.getTabuleiro().getInferiorDireita().toString());
+
+		pintarDeBranco(superiorEsquerdo, superiorCentral, superiorDireita, centroEsquerda, centroCentral, centroDireita,
+				inferiorCentral, inferiorEsquerdo, inferiorDireita);
+	}
+
+	private void pintarDeBranco(JLabel superiorEsquerdo, JLabel superiorCentral, JLabel superiorDireita,
+			JLabel centroEsquerda, JLabel centroCentral, JLabel centroDireita, JLabel inferiorCentral,
+			JLabel inferiorEsquerdo, JLabel inferiorDireita) {
+
+		List<JLabel> listaDeTextos = new ArrayList<JLabel>();
+
+		listaDeTextos.add(superiorEsquerdo);
+		listaDeTextos.add(superiorCentral);
+		listaDeTextos.add(superiorDireita);
+		listaDeTextos.add(centroEsquerda);
+		listaDeTextos.add(centroCentral);
+		listaDeTextos.add(centroDireita);
+		listaDeTextos.add(inferiorCentral);
+		listaDeTextos.add(inferiorEsquerdo);
+		listaDeTextos.add(inferiorDireita);
+
+		for (JLabel x : listaDeTextos) {
+			try {
+				Map<String, Runnable> mapa = new HashMap<String, Runnable>();
+				mapa.put("0", () -> x.setText(""));
+				mapa.get(x.getText()).run();
+			} catch (NullPointerException e) {
+				
+			}
+
+		}
+
 	}
 }

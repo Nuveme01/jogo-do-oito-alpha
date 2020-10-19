@@ -20,18 +20,17 @@ public class ControleDoTabuleiro {
 		tabuleiro.getPonteiro().moverParaCima();
 		tabuleiro.setPonteiro(tabuleiro.getPonteiro().getCima());
 	}
-	
+
 	public void moverPraBaixo() {
 		tabuleiro.getPonteiro().moverParaBaixo();
 		tabuleiro.setPonteiro(tabuleiro.getPonteiro().getBaixo());
 	}
-	
+
 	public void moverPraEsquerda() {
 		tabuleiro.getPonteiro().moverParaEsquerda();
 		tabuleiro.setPonteiro(tabuleiro.getPonteiro().getEsquerda());
 	}
 
-	
 	public void moverPraDireita() {
 		tabuleiro.getPonteiro().moverParaDireita();
 		tabuleiro.setPonteiro(tabuleiro.getPonteiro().getDireita());

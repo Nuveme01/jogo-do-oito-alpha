@@ -8,7 +8,7 @@ import org.junit.Test;
 import ies.br.main.celulas.Celula;
 import ies.br.main.celulas.CelulaCentral;
 
-public class TesteMovimentaçãoCelulaCentral {
+public class TesteMovimentaçãoCelulaParaCima {
 
 	private Celula cima;
 	private Celula baixo;
